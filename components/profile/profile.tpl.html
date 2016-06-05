@@ -1,1 +1,13 @@
-<h1>{{user.message}}</h1>
+<md-content>
+    <div class="layout-align-center">
+        <img ng-src="{{user.profile.picture_large}}">
+    </div>
+    <div>
+        <button ng-click="user.getMessage()">Getmessage</button>
+        <button ng-click="user.getSecretMessage()">GetSecrectMessage</button>
+    </div>
+    <div>
+        <p>{{user.message}}</p>
+    </div>
+
+</md-content>

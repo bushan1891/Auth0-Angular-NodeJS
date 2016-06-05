@@ -4,16 +4,26 @@
             <span>Angular Auth</span>
         </h2>
         <span flex></span>
+
         <md-button
                 aria-lable="Login"
                 ng-click="toolbar.login()"
-        >Login
+                ng-if="!toolbar.auth.isAuthenticated">
+            Login
         </md-button>
-        <md-button>profile</md-button>
+
         <md-button
-                aria-lable="logout"
+                aria-lable="Profile"
+                ui-sref="profile"
+                ng-if="toolbar.auth.isAuthenticated">
+            profile
+        </md-button>
+
+        <md-button
+                aria-lable="Logout"
                 ng-click="toolbar.logout()"
-        >Logout
+                ng-if="toolbar.auth.isAuthenticated">
+            Logout
         </md-button>
 
     </div>
